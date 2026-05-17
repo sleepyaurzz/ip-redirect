@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "ip-redirect/index.html",
+      "src": "ip-redirect/index.js",
       "use": "static"
     }
   ],
