@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "main/index.html",
+      "src": "ip-redirect/index.html",
       "use": "static"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/main/$1"
+      "dest": "/ip-redirect/$1"
     }
   ]
 }
